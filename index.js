@@ -1,7 +1,10 @@
 const express = require('express')
 const sqlite3 = require('sqlite3')
 const session = require('express-session')
+const { authenticator } = require('otplib')
 const bodyParser = require('body-parser')
+const QRCode = require('qrcode')
+const jwt = require('jsonwebtoken')
 const app = express()
 const port = 3000
 
